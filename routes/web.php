@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 // static page
 Route::get('/', 'StaticPageController@index') -> name('static_page.home');
 Route::get('/privacy', 'StaticPageController@privacy') -> name('static_page.privacy');
-Route::get('/domande-frequenti', 'StaticPageController@faq') -> name('static_page.home.faq');
+Route::get('/domande-frequenti', 'StaticPageController@faq') -> name('static_page.faq');
 
 
 // studenti
