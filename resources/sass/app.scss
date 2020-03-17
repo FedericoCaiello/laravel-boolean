@@ -1,1 +1,56 @@
 //
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 90px;
+  color: white;
+  background-color: blue;
+  @include clearfix;
+  .logo{
+    padding: 0 0 0 10px;
+    line-height: 90px;
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    text-align: right;
+    li{
+      display: inline-block;
+      margin: 0px 30px;
+      line-height: 90px;
+      a {
+        color: white;
+        text-decoration: none;
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.nav-footer {
+  background-color: grey;
+  height: 100px;
+  @include clearfix;
+  ul {
+    list-style: none;
+    float: right;
+    text-align: right;
+    a {
+      color: white;
+    }
+  }
+}
