@@ -54,3 +54,28 @@
     }
   }
 }
+
+.students {
+  display: flex;
+  flex-wrap: wrap;
+  .student {
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: lightgrey;
+    width: calc(100% / 2 - 20px);
+    .info {
+    @include clearfix();
+
+      img, .text {
+        float: left;
+      }
+      img {
+        width: 90px;
+        margin-right: 10px;
+      }
+      .text {
+        width: calc(100% - 100px);
+      }
+    }
+  }
+}
