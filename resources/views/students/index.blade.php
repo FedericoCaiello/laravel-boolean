@@ -2,6 +2,15 @@
 
 
 @section('main')
+  <div class="filter">
+    <select class="filter" name="filter">
+      <option value="all">All</option>
+      @foreach ($genders as $gender)
+        <option value="{{$gender}}">{{$gender}}</option>
+      @endforeach
+    </select>
+
+  </div>
   <div class="students">
     @foreach (config('students.students') as $key => $student)
       <div class="student">
